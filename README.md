@@ -1,6 +1,6 @@
 #Como instalar
 
-1. Descargar [aqui](https://github.com/lenguaje-latino/latino-sublimetext-plugin/archive/master.zip) el zip y descomprimir los archivos **LATINO.tmLanguage** y **LATINO.YAML-tmLanguage**
+1. Descargar [aquí](https://github.com/lenguaje-latino/latino-sublimetext-plugin/archive/master.zip) el zip y descomprimir los archivos **LATINO.tmLanguage** y **LATINO.YAML-tmLanguage**
 2. Abrir **Sublime Text 3**
 3. Menu **Preferences** > **Browse Package..**
 4. Pegar los archivos copiados en **User**
