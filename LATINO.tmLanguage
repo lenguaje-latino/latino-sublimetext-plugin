@@ -122,7 +122,7 @@
 			<key>comment</key>
 			<string>Sentencias de control</string>
 			<key>match</key>
-			<string>\b(si|sino|fin|mientras|desde|hasta|elegir|caso|defecto|hacer|cuando|retorno|romper|defecto|salto)\b</string>
+			<string>\b(si|sino|fin|mientras|desde|hasta|caso|defecto|hacer|cuando|retorno|romper|defecto|salto)\b</string>
 			<key>name</key>
 			<string>keyword.control.lat</string>
 		</dict>
@@ -199,12 +199,6 @@
 					<string>storage.type.function.lat</string>
 				</dict>
 			</dict>
-			<key>comment</key>
-			<string>Funcion</string>
-			<key>match</key>
-			<string>(funcion)</string>
-			<key>name</key>
-			<string>meta.function.lat</string>
 		</dict>
 		<dict>
 			<key>captures</key>
@@ -218,7 +212,7 @@
 			<key>comment</key>
 			<string>Funciones Nombres</string>
 			<key>match</key>
-			<string>([a-zA-Z]+[a-zA-Z0-9_]|[a-zA-Z]+[a-zA-Z0-9_] )\(+</string>
+			<string>(escribir|json_codificar|json_decodificar|imprimir|ejecutar_pipe|sistema|incluir|elegir|reemplazar|escribir_archivo|leer_archivo|leer|funcion)</string>
 			<key>name</key>
 			<string>meta.function.lat</string>
 		</dict>
@@ -247,12 +241,6 @@
 					<string>variable.parameter.function.lat</string>
 				</dict>
 			</dict>
-			<key>comment</key>
-			<string>Funciones Parametro Unico</string>
-			<key>match</key>
-			<string>([a-zA-Z]+[a-zA-Z0-9_])\)</string>
-			<key>name</key>
-			<string>meta.function.lat</string>
 		</dict>
 		<dict>
 			<key>captures</key>
@@ -263,12 +251,6 @@
 					<string>variable.parameter.function.lat</string>
 				</dict>
 			</dict>
-			<key>comment</key>
-			<string>Funciones Parametro Unico Letra</string>
-			<key>match</key>
-			<string>([a-zA-Z])\)</string>
-			<key>name</key>
-			<string>meta.function.lat</string>
 		</dict>
 	</array>
 	<key>scopeName</key>
