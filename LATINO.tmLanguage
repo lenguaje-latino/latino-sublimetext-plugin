@@ -27,6 +27,40 @@
 			<string>comment.line.number-sign.lat</string>
 		</dict>
 		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>comment.line.number-sign.lat</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>Comentarios</string>
+			<key>match</key>
+			<string>(\//).*$\n?</string>
+			<key>name</key>
+			<string>comment.line.number-sign.lat</string>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>/\*</string>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>comment.block.end.lat</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>Comentarios</string>
+			<key>end</key>
+			<string>\*/</string>
+			<key>name</key>
+			<string>comment.block.end.latino</string>
+		</dict>
+		<dict>
 			<key>begin</key>
 			<string>"</string>
 			<key>captures</key>
@@ -106,7 +140,7 @@
 			<key>comment</key>
 			<string>Constantes Logicas</string>
 			<key>match</key>
-			<string>\b(verdadero|falso)\b</string>
+			<string>\b(verdadero|cierto|falso)\b</string>
 			<key>name</key>
 			<string>constant.language.lat</string>
 		</dict>
@@ -122,7 +156,7 @@
 			<key>comment</key>
 			<string>Sentencias de control</string>
 			<key>match</key>
-			<string>\b(si|sino|fin|mientras|desde|hasta|caso|defecto|hacer|cuando|retorno|romper|defecto|salto)\b</string>
+			<string>\b(si|sino|fin|mientras|desde|hasta|elegir|caso|defecto|hacer|cuando|retorno|defecto)\b</string>
 			<key>name</key>
 			<string>keyword.control.lat</string>
 		</dict>
@@ -138,7 +172,7 @@
 			<key>comment</key>
 			<string>Tipo de datos</string>
 			<key>match</key>
-			<string>\b(logico|entero|decimal|caracter|cadena)</string>
+			<string>\b(logico|numerico|cadena)</string>
 			<key>name</key>
 			<string>meta.type.lat</string>
 		</dict>
@@ -199,6 +233,12 @@
 					<string>storage.type.function.lat</string>
 				</dict>
 			</dict>
+			<key>comment</key>
+			<string>Funcion</string>
+			<key>match</key>
+			<string>(funcion)</string>
+			<key>name</key>
+			<string>meta.function.lat</string>
 		</dict>
 		<dict>
 			<key>captures</key>
@@ -212,7 +252,7 @@
 			<key>comment</key>
 			<string>Funciones Nombres</string>
 			<key>match</key>
-			<string>(escribir|json_codificar|json_decodificar|imprimir|ejecutar_pipe|sistema|incluir|elegir|reemplazar|escribir_archivo|leer_archivo|leer|funcion)</string>
+			<string>([a-zA-Z_][a-zA-Z0-9_]*)+( )*\(+</string>
 			<key>name</key>
 			<string>meta.function.lat</string>
 		</dict>
@@ -228,7 +268,7 @@
 			<key>comment</key>
 			<string>Funciones Parametros Varios</string>
 			<key>match</key>
-			<string>([a-zA-Z]+[a-zA-Z0-9_]), (?=logico|entero|decimal|caracter|cadena)</string>
+			<string>\b([a-zA-Z_][a-zA-Z_0-9]*)\s*(?:(,)|(?=[\n\)]))</string>
 			<key>name</key>
 			<string>meta.function.lat</string>
 		</dict>
@@ -241,6 +281,12 @@
 					<string>variable.parameter.function.lat</string>
 				</dict>
 			</dict>
+			<key>comment</key>
+			<string>Funciones Parametro Unico</string>
+			<key>match</key>
+			<string>([a-zA-Z][a-zA-Z0-9_]*)\)</string>
+			<key>name</key>
+			<string>meta.function.lat</string>
 		</dict>
 		<dict>
 			<key>captures</key>
@@ -251,6 +297,28 @@
 					<string>variable.parameter.function.lat</string>
 				</dict>
 			</dict>
+			<key>comment</key>
+			<string>Funciones Parametro Unico Letra</string>
+			<key>match</key>
+			<string>([a-zA-Z])\)</string>
+			<key>name</key>
+			<string>meta.function.lat</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>meta.function-call.lat</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>Funciones Llamada</string>
+			<key>match</key>
+			<string>(?i:(?!\$[a-z_][a-z0-9_]*-&amp;gt;)([a-z_][a-z_0-9]*)\s*\()</string>
+			<key>name</key>
+			<string>meta.function-call.lat</string>
 		</dict>
 	</array>
 	<key>scopeName</key>
