@@ -61,40 +61,20 @@
 			<string>comment.block.end.latino</string>
 		</dict>
 		<dict>
-			<key>begin</key>
-			<string>"</string>
 			<key>captures</key>
-			<dict>
-				<key>1</key>
-				<dict>
-					<key>name</key>
-					<string>string.quoted.double.lat</string>
-				</dict>
-			</dict>
-			<key>comment</key>
-			<string>Comillas</string>
-			<key>end</key>
-			<string>"</string>
-			<key>name</key>
-			<string>string.quoted.double.lat</string>
-		</dict>
-		<dict>
-			<key>begin</key>
-			<string>'</string>
-			<key>captures</key>
-			<dict>
-				<key>1</key>
-				<dict>
-					<key>name</key>
-					<string>string.quoted.single.lat</string>
-				</dict>
-			</dict>
-			<key>comment</key>
-			<string>Comillas</string>
-			<key>end</key>
-			<string>'</string>
-			<key>name</key>
-			<string>string.quoted.single.lat</string>
+            <dict>
+                <key>1</key>
+                <dict>
+                    <key>name</key>
+                    <string>string.quoted.lat</string>
+                </dict>
+            </dict>
+            <key>comment</key>
+            <string>Comillas</string>
+            <key>match</key>
+            <string>(['"])(?:(?!\1|\\).|\\.)*\1</string>
+            <key>name</key>
+            <string>string.quoted.lat</string>
 		</dict>
 		<dict>
 			<key>captures</key>
@@ -156,7 +136,7 @@
 			<key>comment</key>
 			<string>Sentencias de control</string>
 			<key>match</key>
-			<string>\b(si|sino|fin|mientras|desde|hasta|elegir|caso|defecto|hacer|cuando|retorno|defecto)\b</string>
+			<string>\b(si|osi|sino|fin|mientras|desde|hasta|elegir|caso|defecto|hacer|cuando|retorno|defecto)\b</string>
 			<key>name</key>
 			<string>keyword.control.lat</string>
 		</dict>

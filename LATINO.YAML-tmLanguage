@@ -30,18 +30,10 @@ patterns:
     "1": {name: comment.block.end.lat }
 
 - comment: Comillas 
-  name: string.quoted.double.lat
-  begin: '"'
-  end: '"'
+  name: string.quoted.lat
+  match: '([\'\"])(?:(?!\1|\\).|\\.)*\1'
   captures:
-    '1': {name: string.quoted.double.lat}
-
-- comment: Comillas 
-  name: string.quoted.single.lat
-  begin: "'"
-  end: "'"
-  captures:
-    '1': {name: string.quoted.single.lat}
+    '1': {name: string.quoted.lat}
 
 #                   INICIO CONSTANTES
 - comment: Constantes 
@@ -65,7 +57,7 @@ patterns:
 #                   INICIO SENTENCIAS DE CONTROL
 - comment: Sentencias de control
   name: keyword.control.lat
-  match: '\b(si|sino|fin|mientras|desde|hasta|elegir|caso|defecto|hacer|cuando|retorno|defecto)\b'
+  match: '\b(si|osi|sino|fin|mientras|desde|hasta|elegir|caso|defecto|hacer|cuando|retorno|defecto)\b'
   captures:
     '1': {name: keyword.control.lat}
 
